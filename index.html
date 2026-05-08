@@ -1,92 +1,225 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>축하합니다!</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap" rel="stylesheet">
+  <title>Diet Note</title>
+
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
   <header class="header">
-    <div class="logo">YooN</div>
-    <nav>
-      <a class="active" href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">About</a>
+    <h1 class="header__logo">Diet Note</h1>
+
+    <nav class="nav">
+      <a class="nav__link" href="#">오늘</a>
+      <a class="nav__link" href="#">식단 기록</a>
+      <a class="nav__link" href="#">칼로리 요약</a>
+      <a class="nav__link" href="#">목표</a>
     </nav>
+
+    <button class="button button--primary">
+      식단 시작
+    </button>
   </header>
 
-  <main>
-    <section class="intro">
-      <p>
-        <strong>YOON</strong> I'm a product designer in Seoul. I'm a product designer in Seoul.
-        I'm a product designer in Seoul. I'm a product designer in Seoul.   
+  <main class="main">
+    <section class="hero">
+      <p class="hero__caption">
+        CAUTION: THIS IS A ① DIET LOG, NOT A ② PERFECT DAY.
       </p>
+
+      <h2 class="hero__title">
+        diet<br />
+        note
+      </h2>
+
+      <div class="hero__line"></div>
+
+      <p class="hero__subtitle">
+        life is meal record*
+      </p>
+
+      <button class="button button--primary">
+        오늘 식단 기록하기
+      </button>
+
+      <article class="hero__object hero__object--salad">
+        <span class="hero__emoji">🥗</span>
+        <p class="hero__object-text">
+          오늘 섭취 칼로리 1,450
+        </p>
+      </article>
+
+      <article class="hero__object hero__object--breakfast">
+        <span class="hero__emoji">🍳</span>
+        <p class="hero__object-text">
+          기록한 식단 4개
+        </p>
+      </article>
+
+      <article class="hero__object hero__object--note">
+        <span class="hero__emoji">🥑</span>
+        <p class="hero__object-text">
+          완벽하지 않아도 기록하면 충분해.
+        </p>
+      </article>
     </section>
 
-    <section class="exhibition">
-      <h2>Current Projects</h2>
+    <section class="stats">
+      <article class="stats__card">
+        <strong class="stats__number">1,450</strong>
+        <p class="stats__label">오늘 섭취 칼로리</p>
+      </article>
 
-      <div class="grid two">
-        <img src="images/4.png" alt="">
-        <img src="images/5.png" alt="">
-        <img src="images/6.png" alt="">
-      </div>
+      <article class="stats__card">
+        <strong class="stats__number">250</strong>
+        <p class="stats__label">남은 칼로리</p>
+      </article>
 
-      <div class="info-row">
-        <div>
-          <p>Yang-ha, Yoori: Micro-Disaster</p>
-          <p>04/10-05/23/2026</p>
-        </div>
-        <a href="#">View more ↗</a>
-      </div>
+      <article class="stats__card">
+        <strong class="stats__number">4</strong>
+        <p class="stats__label">기록한 식단</p>
+      </article>
     </section>
 
-    - <section class="exhibition">
-      <h2 class="light">Past projects</h2>
-<!--
-      <img class="wide-img" src="images/past-wide.jpg" alt="">
-    -->
-        <div class="grid two bordered">
-        <img src="images/7.png" alt="">
-        <img src="images/8.png" alt="">
-      </div>
+    <section class="layout">
+      <section class="meal">
+        <p class="meal__subtitle">
+          DAILY MEAL RECORD
+        </p>
 
-      <div class="info-row">
-        <div>
-          <p>Kyu Hwa Moon, Jae Youl Joung, Sung Joo Ham: Life in Between</p>
-          <p>11/19-12/27/2025</p>
+        <h2 class="meal__title">
+          오늘의 식단 기록
+        </h2>
+
+        <div class="meal__grid">
+          <article class="card">
+            <h3 class="card__title">아침</h3>
+
+            <p class="card__text">
+              삶은 달걀<br />
+              통밀 토스트<br />
+              샐러드
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">점심</h3>
+
+            <p class="card__text">
+              닭가슴살 도시락<br />
+              현미밥<br />
+              구운 야채
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">저녁</h3>
+
+            <p class="card__text">
+              두부 샐러드<br />
+              고구마<br />
+              허브티
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">간식</h3>
+
+            <p class="card__text">
+              플레인 요거트<br />
+              견과류<br />
+              바나나
+            </p>
+          </article>
         </div>
-        <a href="#">View more ↗</a>
-      </div>
-    </section>
+      </section>
 
-    <section class="about">
-      <button>About</button>
+      <aside class="aside">
+        <section class="aside__box">
+          <p class="aside__label">
+            목표 칼로리
+          </p>
 
-      <div class="about-grid">
-        <div class="contact">
-          <p>32-11, Samseong-ro 63-gil, Gangnam-gu, Seoul, Republic of Korea</p>
-          <p>E oaogallery@gmail.com</p>
-          <p>T 02.6207.3211</p>
-          <br>
-          <p>수 - 토요일, 12 - 18시</p>
-          <p>Wednesday - Saturday, 12pm - 18pm</p>
-          <p>(Closed on Mon, Tue, Sunday and Holidays)</p>
-        </div>
+          <strong class="aside__number">
+            1,700 kcal
+          </strong>
+        </section>
 
-        <img src="images/10.png" alt="">
-      </div>
+        <section class="aside__box">
+          <p class="aside__label">
+            오늘 물 섭취량
+          </p>
+
+          <strong class="aside__number">
+            1.5L
+          </strong>
+        </section>
+
+        <section class="recommend">
+          <h2 class="recommend__title">
+            식단 추천
+          </h2>
+
+          <article class="recommend__card">
+  <div class="recommend__image-box">
+    <img
+      class="recommend__image"
+      src="./images/1.1.webp"
+      alt="양배추 참치 덮밥"
+    />
+  </div>
+
+  <div class="recommend__content">
+    <h3 class="recommend__name">
+      양배추 참치 덮밥
+    </h3>
+
+    <p class="recommend__text">
+      포만감 있는 한끼, 다이어트에도 부담 없는 식단.
+    </p>
+  </div>
+</article>
+
+          <article class="recommend__card">
+  <div class="recommend__image-box">
+    <img
+      class="recommend__image"
+      src="./images/2.1.webp"
+      alt="말차 스무디"
+    />
+  </div>
+
+  <div class="recommend__content">
+    <h3 class="recommend__name">
+      말차 스무디
+    </h3>
+
+    <p class="recommend__text">
+      상쾌한 녹차 향과 영양을 담은 건강 음료.
+    </p>
+  </div>
+</article>
+        </section>
+
+        <button class="button button--primary">
+          식단 추가
+        </button>
+
+        <button class="button button--secondary">
+          기록 저장
+        </button>
+      </aside>
     </section>
   </main>
 
-  <footer>
-    <p>Copyright 2022. oaoa gallery All rights reserved.</p>
+  <footer class="footer">
+    <p class="footer__text">
+      © 2026. 제작자 오즈코딩스쿨 PD10기 정혜원
+    </p>
   </footer>
-
-  <a class="top-btn" href="#">↑</a>
 </body>
 </html>
